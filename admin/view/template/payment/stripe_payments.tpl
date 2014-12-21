@@ -52,6 +52,23 @@
           </div>
         </div>
         <div class="form-group required">
+          <label class="col-sm-2 control-label" for="stripe_payments_mode"><?php echo $entry_mode; ?></label>
+          <div class="col-sm-10">
+            <select name="stripe_payments_mode" id="stripe_payments_mode" class="form-control">
+              <?php if ($stripe_payments_mode == 'live') { ?>
+              <option value="live" selected="selected"><?php echo $text_live; ?></option>
+              <?php } else { ?>
+              <option value="live"><?php echo $text_live; ?></option>
+              <?php } ?>
+              <?php if ($stripe_payments_mode == 'test') { ?>
+              <option value="test" selected="selected"><?php echo $text_test; ?></option>
+              <?php } else { ?>
+              <option value="test"><?php echo $text_test; ?></option>
+              <?php } ?>
+            </select>
+          </div>
+        </div>
+        <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-mode"><?php echo $entry_method; ?></label>
           <div class="col-sm-10">
             <select name="stripe_payments_method" id="stripe_payments_method-mode" class="form-control">
@@ -60,7 +77,7 @@
           </div>
         </div>
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="input-mode"><?php echo $entry_order_status; ?></label>
+          <label class="col-sm-2 control-label" for="stripe_payments_order_status_id-mode"><?php echo $entry_order_status; ?></label>
           <div class="col-sm-10">
             <select name="stripe_payments_order_status_id" id="stripe_payments_order_status_id-mode" class="form-control">
               <?php foreach ($order_statuses as $order_status) { ?>
@@ -74,7 +91,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="input-mode"><?php echo $entry_geo_zone; ?></label>
+          <label class="col-sm-2 control-label" for="stripe_payments_geo_zone_id-mode"><?php echo $entry_geo_zone; ?></label>
           <div class="col-sm-10">
             <select name="stripe_payments_geo_zone_id" id="stripe_payments_geo_zone_id-mode" class="form-control">
               <option value="0"><?php echo $text_all_zones; ?></option>
@@ -89,7 +106,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="input-mode"><?php echo $entry_status; ?></label>
+          <label class="col-sm-2 control-label" for="stripe_payments_status-mode"><?php echo $entry_status; ?></label>
           <div class="col-sm-10">
             <select name="stripe_payments_status" id="stripe_payments_status-mode" class="form-control">
               <?php if ($stripe_payments_status) { ?>
@@ -114,34 +131,8 @@
             <input size="1" type="text" name="stripe_payments_sort_order" value="<?php echo $stripe_payments_sort_order; ?>" placeholder="0" id="stripe_payments_sort_order" class="form-control" />
           </div>
         </div>
-        <input type="hidden" name="stripe_payments_mode" value="live" />
       </form>
     </div>
   </div>
 </div>
 <?php echo $footer; ?>
-  
-  <div class="content">
-    <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
-      <table class="form">
-        <!--<tr>
-          <td><?php echo $entry_mode; ?></td>
-          <td><select name="stripe_payments_mode">
-              <?php if ($stripe_payments_mode == 'live') { ?>
-              <option value="live" selected="selected"><?php echo $text_live; ?></option>
-              <?php } else { ?>
-              <option value="live"><?php echo $text_live; ?></option>
-              <?php } ?>
-              <?php if ($stripe_payments_mode == 'test') { ?>
-              <option value="test" selected="selected"><?php echo $text_test; ?></option>
-              <?php } else { ?>
-              <option value="test"><?php echo $text_test; ?></option>
-              <?php } ?>
-            </select></td>
-        </tr>-->
-
-      </table>
-    </form>
-  </div>
-</div>
-
