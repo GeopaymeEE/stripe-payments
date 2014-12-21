@@ -14,14 +14,26 @@
       </ul>
     </div>
   </div>
-  <?php if ($error_warning) { ?>
-  <div class="warning"><?php echo $error_warning; ?></div>
-  <?php } ?>
-  <div class="box">
-    <div class="heading">
-    <h1><img src="view/image/payment.png" alt="" /> <?php echo $heading_title; ?></h1>
-    <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a href="<?php echo $cancel; ?>" class="button"><?php echo $button_cancel; ?></a></div>
+  <div class="container-fluid">
+    <?php if ($error_warning) { ?>
+    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    <?php } ?>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-pencil"></i> Title Here</h3>
+      </div>
+    </div>
+    <div class="panel-body">
+      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
+      
+      </form>
+    </div>
   </div>
+</div>
+<?php echo $footer; ?>
+  
   <div class="content">
     <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
       <table class="form">
@@ -110,4 +122,4 @@
     </form>
   </div>
 </div>
-<?php echo $footer; ?>
+
