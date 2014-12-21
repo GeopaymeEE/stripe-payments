@@ -1,6 +1,6 @@
 {
-  "name": "andyvr/stripe-payments",
-  "description": "Stripe payment gateway extension for Opencart v1.5.x",
+  "name": "publiux/stripe-payments",
+  "description": "Stripe payment gateway extension for Opencart v2.0.x",
   "type": "opencart-extension",
   "license": "MIT",
   "require": {
