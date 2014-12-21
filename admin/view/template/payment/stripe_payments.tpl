@@ -40,13 +40,13 @@
           </div>
         </div>
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="stripe_payments_public_key_test"><?php echo $entry_publictest; ?></label>
+          <label class="col-sm-2 control-label" for="stripe_payments_public_key_test"><?php echo $entry_public_test; ?></label>
           <div class="col-sm-10">
             <input size="40" type="text" name="stripe_payments_public_key_test" value="<?php echo $stripe_payments_public_key_test; ?>" placeholder="Stripe Public Test Key" id="stripe_payments_public_key_test" class="form-control" />
           </div>
         </div>
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="stripe_payments_private_key_test"><?php echo $entry_keytest; ?></label>
+          <label class="col-sm-2 control-label" for="stripe_payments_private_key_test"><?php echo $entry_key_test; ?></label>
           <div class="col-sm-10">
             <input size="40" type="text" name="stripe_payments_private_key_test" value="<?php echo $stripe_payments_private_key_test; ?>" placeholder="Stripe Private Test Key" id="stripe_payments_private_key_test" class="form-control" />
           </div>
