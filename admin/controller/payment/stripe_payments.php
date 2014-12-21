@@ -144,13 +144,12 @@ class ControllerPaymentStripePayments extends Controller {
 			$data['stripe_payments_sort_order'] = $this->config->get('stripe_payments_sort_order');
 		}
 
-		$this->template = 'payment/stripe_payments.tpl';
 		$this->children = array(
 			'common/header',	
 			'common/footer'	
 		);
 
-		$this->response->setOutput($this->render());
+		$this->response->setOutput($this->load->view('payment/stripe_payments.tpl', $data);
 	}
 
 	protected function validate() {
