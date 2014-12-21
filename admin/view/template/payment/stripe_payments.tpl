@@ -91,9 +91,9 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="col-sm-2 control-label" for="stripe_payments_total"><?php echo $entry_total; ?></label>
+          <label class="col-md-2 control-label" for="stripe_payments_total"><?php echo $entry_total; ?></label>
           <div class="col-sm-10">
-            <input size="20" type="text" name="stripe_payments_total" value="<?php echo $stripe_payments_public_key; ?>" placeholder="Payments Total Minimum" id="stripe_payments_total" class="form-control" />
+            <input size="20" type="text" name="stripe_payments_total" value="<?php echo $stripe_payments_total; ?>" placeholder="Payments Total Minimum" id="stripe_payments_total" class="form-control" />
           </div>
         </div>
         <div class="form-group">
