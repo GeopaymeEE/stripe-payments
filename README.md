@@ -12,11 +12,11 @@ The most convenient way to install the extension is with Composer, add following
 ```
 {
   "require": {
-    "andyvr/stripe-payments": "@dev"
+    "publiux/stripe-payments": "@dev"
   },
   "scripts": {
     "post-install-cmd": [
-      "sh ./vendor/andyvr/stripe-payments/extension-install.sh"
+      "sh ./vendor/publiux/stripe-payments/extension-install.sh"
     ]
    }
 }
