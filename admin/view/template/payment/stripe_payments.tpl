@@ -33,6 +33,21 @@
             <input size="40" type="text" name="stripe_payments_public_key" value="<?php echo $stripe_payments_public_key; ?>" placeholder="Stripe Public Key" id="stripe_payments_public_key" class="form-control" />
           </div>
         </div>
+        <div class="form-group required">
+          <label class="col-sm-2 control-label" for="input-merchant-id"><?php echo $entry_key; ?></label>
+          <div class="col-sm-10">
+            <input size="40" type="text" name="stripe_payments_private_key" value="<?php echo $stripe_payments_private_key; ?>" placeholder="Stripe Private Key" id="stripe_payments_private_key" class="form-control" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="input-mode"><?php echo $entry_method; ?></label>
+          <div class="col-sm-10">
+            <select name="stripe_payments_method" id="stripe_payments_method-mode" class="form-control">
+              <option value="charge" selected="selected"><?php echo $text_charge; ?></option>
+            </select>
+          </div>
+        </div>
+        <input type="hidden" name="stripe_payments_mode" value="live" />
       </form>
     </div>
   </div>
@@ -42,14 +57,6 @@
   <div class="content">
     <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
       <table class="form">
-        <tr>
-          <td><span class="required">*</span> <?php echo $entry_key; ?></td>
-          <td><input size="40" type="text" name="stripe_payments_private_key" value="<?php echo $stripe_payments_private_key; ?>" />
-            <?php if ($error_key) { ?>
-            <span class="error"><?php echo $error_key; ?></span>
-            <?php } ?></td>
-        </tr>
-        <input type="hidden" name="stripe_payments_mode" value="live" />
         <!--<tr>
           <td><?php echo $entry_mode; ?></td>
           <td><select name="stripe_payments_mode">
@@ -65,12 +72,7 @@
               <?php } ?>
             </select></td>
         </tr>-->
-        <tr>
-          <td><?php echo $entry_method; ?></td>
-          <td><select name="stripe_payments_method">
-              <option value="charge" selected="selected"><?php echo $text_charge; ?></option>
-            </select></td>
-        </tr>
+
         <tr>
           <td><?php echo $entry_order_status; ?></td>
           <td><select name="stripe_payments_order_status_id">
