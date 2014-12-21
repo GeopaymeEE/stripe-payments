@@ -149,7 +149,7 @@ class ControllerPaymentStripePayments extends Controller {
 			'common/footer'	
 		);
 
-		$this->response->setOutput($this->load->view('payment/stripe_payments.tpl', $data);
+		$this->response->setOutput($this->load->view('payment/stripe_payments.tpl'), $data);
 	}
 
 	protected function validate() {
