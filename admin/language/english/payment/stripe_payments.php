@@ -10,6 +10,7 @@ $_['text_test']                 = 'Test';
 $_['text_live']                 = 'Live';
 $_['text_authorization']        = 'Authorization';
 $_['text_charge']               = 'Charge';
+$_['text_edit']                 = 'Edit Stripe Information';
 
 // Entry
 $_['entry_public']              = 'Public Key:';
