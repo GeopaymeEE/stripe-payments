@@ -87,11 +87,23 @@ class ControllerPaymentStripePayments extends Controller {
 		} else {
 			$data['stripe_payments_public_key'] = $this->config->get('stripe_payments_public_key');
 		}
+		
+		if (isset($this->request->post['stripe_payments_public_key_test'])) {
+			$data['stripe_payments_public_key_test'] = $this->request->post['stripe_payments_public_key_test'];
+		} else {
+			$data['stripe_payments_public_key_test'] = $this->config->get('stripe_payments_public_key_test');
+		}
 
 		if (isset($this->request->post['stripe_payments_private_key'])) {
 			$data['stripe_payments_private_key'] = $this->request->post['stripe_payments_private_key'];
 		} else {
 			$data['stripe_payments_private_key'] = $this->config->get('stripe_payments_private_key');
+		}
+		
+		if (isset($this->request->post['stripe_payments_private_key_test'])) {
+			$data['stripe_payments_private_key_test'] = $this->request->post['stripe_payments_private_key_test'];
+		} else {
+			$data['stripe_payments_private_key_test'] = $this->config->get('stripe_payments_private_key_test');
 		}
 
 		if (isset($this->request->post['stripe_payments_mode'])) {
