@@ -66,7 +66,7 @@
       var token = response.id;
       //$form.append($('<input type="hidden" name="stripeToken" />').val(token));
       $.ajax({
-        url: 'index.php?route=payment/stripe_payments/send',
+        url: 'index.php?route=payment/stripe_payments/confirm',
         type: 'post',
         data: 'stripeToken=' + token,
         dataType: 'json',
