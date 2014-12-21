@@ -22,12 +22,17 @@
     <?php } ?>
     <div class="panel panel-default">
       <div class="panel-heading">
-      <h3 class="panel-title"><i class="fa fa-pencil"></i> Title Here</h3>
+      <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_edit; ?></h3>
       </div>
     </div>
     <div class="panel-body">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
-      
+        <div class="form-group required">
+          <label class="col-sm-2 control-label" for="input-merchant-id"><?php echo $entry_public; ?></label>
+          <div class="col-sm-10">
+            <input size="40" type="text" name="stripe_payments_public_key" value="<?php echo $stripe_payments_public_key; ?>" placeholder="Stripe Public Key" id="stripe_payments_public_key" class="form-control" />
+          </div>
+        </div>
       </form>
     </div>
   </div>
@@ -37,13 +42,6 @@
   <div class="content">
     <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
       <table class="form">
-        <tr>
-          <td><span class="required">*</span> <?php echo $entry_public; ?></td>
-          <td><input size="40" type="text" name="stripe_payments_public_key" value="<?php echo $stripe_payments_public_key; ?>" />
-            <?php if ($error_public) { ?>
-            <span class="error"><?php echo $error_public; ?></span>
-            <?php } ?></td>
-        </tr>
         <tr>
           <td><span class="required">*</span> <?php echo $entry_key; ?></td>
           <td><input size="40" type="text" name="stripe_payments_private_key" value="<?php echo $stripe_payments_private_key; ?>" />
