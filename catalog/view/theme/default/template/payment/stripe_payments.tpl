@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo $this->config->get('config_ssl'); ?>catalog/view/theme/default/stylesheet/stripe_payments.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $config_ssl; ?>catalog/view/theme/default/stylesheet/stripe_payments.css">
 <h2><?php echo $text_credit_card; ?></h2>
 <form action="" method="POST" id="payment-form">
 <span class="payment-errors error"></span>
