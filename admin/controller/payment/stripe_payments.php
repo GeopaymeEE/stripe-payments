@@ -29,6 +29,8 @@ class ControllerPaymentStripePayments extends Controller {
 
 		$data['entry_public'] = $this->language->get('entry_public');
 		$data['entry_key'] = $this->language->get('entry_key');
+		$data['entry_public_test'] = $this->language->get('entry_public_test');
+		$data['entry_key_test'] = $this->language->get('entry_key_test');
 		$data['entry_mode'] = $this->language->get('entry_mode');
 		$data['entry_method'] = $this->language->get('entry_method');
 		$data['entry_total'] = $this->language->get('entry_total');
