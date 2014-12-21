@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_title']           = 'Pay Securely & Safeulywith Credit / Debit Card';
+$_['text_title']           = 'Pay Securely & Safely with Credit / Debit Card';
 $_['text_credit_card']     = 'Credit / Debit Card Details';
 $_['text_wait']            = 'Please wait!';
 
