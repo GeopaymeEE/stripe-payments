@@ -1,6 +1,6 @@
 <?php
 class ControllerPaymentStripePayments extends Controller {
-	protected function index() {
+	public function index() {
 		$this->load->language('payment/stripe_payments');
 
 		$data['text_credit_card'] = $this->language->get('text_credit_card');
@@ -46,6 +46,10 @@ class ControllerPaymentStripePayments extends Controller {
 		} else {
 			return $this->load->view('default/template/payment/stripe_payments.tpl', $data);
 		}	
+		
+	}
+	
+	public function confirm(){
 		
 	}
 	public function send() {
