@@ -95,7 +95,7 @@
       var $form = $(this);
       $form.find('button').prop('disabled', true);
       $form.find('.payment-errors').text('');
-      $('#payment').before('<div class="attention"><img src="<?php echo $config_ssl'; ?>catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+      $('#payment').before('<div class="attention"><img src="<?php echo $config_ssl; ?>catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
       Stripe.card.createToken($form, stripeResponseHandler);
       return false;
     });
