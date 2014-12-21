@@ -38,12 +38,11 @@
   </table>
 </div>
 <div class="buttons">
-  <div class="right">
-    <input type="submit" value="<?php echo $button_confirm; ?>" id="button-confirm" class="button" />
+  <div class="pull-right">
+    <input type="submit" value="<?php echo $button_confirm; ?>" id="button-confirm" class="btn btn-primary" />
   </div>
 </div>
 </form>
-
 <!-- The required Stripe lib -->
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
