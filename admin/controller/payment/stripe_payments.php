@@ -144,10 +144,8 @@ class ControllerPaymentStripePayments extends Controller {
 			$data['stripe_payments_sort_order'] = $this->config->get('stripe_payments_sort_order');
 		}
 
-		$this->children = array(
-			'common/header',	
-			'common/footer'	
-		);
+		$data['header'] = $this->load->controller('common/header');
+		$data['footer'] = $this->load->controller('common/footer');
 
 		$this->response->setOutput($this->load->view('payment/stripe_payments.tpl'), $data);
 	}
