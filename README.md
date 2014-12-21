@@ -17,6 +17,9 @@ The most convenient way to install the extension is with Composer, add following
   "scripts": {
     "post-install-cmd": [
       "sh ./vendor/publiux/stripe-payments/extension-install.sh"
+    ],
+    "post-update-cmd": [
+      "sh ./vendor/publiux/stripe-payments/extension-install.sh"
     ]
    }
 }

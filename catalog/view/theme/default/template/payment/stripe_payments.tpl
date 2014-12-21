@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo $this->config->get('config_ssl'); ?>catalog/view/theme/default/stylesheet/stripe_payments.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $config_ssl; ?>catalog/view/theme/default/stylesheet/stripe_payments.css">
 <h2><?php echo $text_credit_card; ?></h2>
 <form action="" method="POST" id="payment-form">
 <span class="payment-errors error"></span>
@@ -49,7 +49,7 @@
 <script type="text/javascript">
   function wait_for_stripe_to_load() {
     if (window.Stripe)
-        Stripe.setPublishableKey('<?php echo $stripe_payments_public_key; ?>');
+      Stripe.setPublishableKey('<?php echo $stripe_payments_public_key; ?>');
     else
         setTimeout(function() { wait_for_stripe_to_load() }, 50);
   }
@@ -66,7 +66,7 @@
       var token = response.id;
       //$form.append($('<input type="hidden" name="stripeToken" />').val(token));
       $.ajax({
-        url: 'index.php?route=payment/stripe_payments/send',
+        url: 'index.php?route=payment/stripe_payments/confirm',
         type: 'post',
         data: 'stripeToken=' + token,
         dataType: 'json',
@@ -91,7 +91,7 @@
       var $form = $(this);
       $form.find('button').prop('disabled', true);
       $form.find('.payment-errors').text('');
-      $('#payment').before('<div class="attention"><img src="<?php echo $this->config->get('config_ssl'); ?>catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
+      $('#payment').before('<div class="attention"><img src="<?php echo $config_ssl; ?>catalog/view/theme/default/image/loading.gif" alt="" /> <?php echo $text_wait; ?></div>');
       Stripe.card.createToken($form, stripeResponseHandler);
       return false;
     });
