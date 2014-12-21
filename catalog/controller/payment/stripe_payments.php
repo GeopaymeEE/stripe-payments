@@ -104,12 +104,12 @@ class ControllerPaymentStripePayments extends Controller {
 
 		//If successful log transaction in opencart system
 		if (!$error) {
-			$this->model_checkout_order->confirm($this->session->data['order_id'], $this->config->get('stripe_payments_order_status_id'));
+			$this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('stripe_payments_order_status_id'));
 
 			$json['success'] = $this->url->link('checkout/success', '', 'SSL');
 		} else {
 			$json['error'] = (string)$error['message'];
-            $json['details'] = $error;
+            		$json['details'] = $error;
 		}
 
 		$this->response->setOutput(json_encode($json));
