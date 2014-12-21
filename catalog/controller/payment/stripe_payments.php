@@ -14,7 +14,7 @@ class ControllerPaymentStripePayments extends Controller {
 		$data['button_confirm'] = $this->language->get('button_confirm');
 		$data['button_back'] = $this->language->get('button_back');
         
-        	if ($this->config->get(stripe_payments_mode) == 'live') {
+        	if ($this->config->get('stripe_payments_mode') == 'live') {
         		$data['stripe_payments_public_key'] = $this->config->get('stripe_payments_public_key');
         	}
         	else {
@@ -59,7 +59,7 @@ class ControllerPaymentStripePayments extends Controller {
         //Load Stripe Library
         require_once('./vendor/stripe/stripe-php/lib/Stripe.php');
         
-        if ($this->config->get(stripe_payments_mode) == 'live') {
+        if ($this->config->get('stripe_payments_mode') == 'live') {
 		$stripe = array(
 	          "secret_key"      => $this->config->get('stripe_payments_private_key'),
 	          "publishable_key" => $this->config->get('stripe_payments_public_key')
