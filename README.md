@@ -1,6 +1,8 @@
 stripe-payments
 ===============
 
+This is a fork of andyvr's stripe-payments project. It now works with version 2.0+ of OpenCart.
+
 Stripe Payments is the simple and lightweight implementation of Stripe.com payment service for Opencart. Currently it is the only Stripe Opencart payment gateway extension that is free and open source. It's licensed under MIT license, therefore feel free to use it in any project or modify the source code.
 
 <h3>Getting Started</h3>
@@ -12,7 +14,7 @@ The most convenient way to install the extension is with Composer, add following
 ```
 {
   "require": {
-    "publiux/stripe-payments": "@dev"
+    "publiux/stripe-payments": "@dev-master"
   },
   "scripts": {
     "post-install-cmd": [
