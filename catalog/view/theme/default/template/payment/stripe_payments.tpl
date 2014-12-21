@@ -49,7 +49,7 @@
 <script type="text/javascript">
   function wait_for_stripe_to_load() {
     if (window.Stripe)
-      <?php if $stripe_payments_mode == 'live' {?>
+      <?php if ($stripe_payments_mode == 'live') {?>
         Stripe.setPublishableKey('<?php echo $stripe_payments_public_key; ?>');
       <?php } else {?>
         Stripe.setPublishableKey('<?php echo $stripe_payments_public_key_test; ?>');
