@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ./vendor/andyvr/stripe-payments
+cd ./vendor/publiux/stripe-payments
 rsync -Rarz admin ../../../
 rsync -Rarz catalog ../../../
 rm -Rf vendor
