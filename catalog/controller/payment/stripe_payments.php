@@ -20,6 +20,8 @@ class ControllerPaymentStripePayments extends Controller {
         	else {
         		$data['stripe_payments_public_key'] = $this->config->get('stripe_payments_public_key_test');	
         	}
+        	
+        	$data['config_ssl'] = $this->config->get('config_ssl');
 
 		$data['months'] = array();
 
