@@ -15,8 +15,8 @@ $_['text_edit']                 = 'Edit Stripe Information';
 // Entry
 $_['entry_public']              = 'Public Live Key:';
 $_['entry_key']                 = 'Secret Live Key:';
-$_['entry_publictest']              = 'Public Test Key:';
-$_['entry_keytest']                 = 'Secret Test Key:';
+$_['entry_public_test']              = 'Public Test Key:';
+$_['entry_key_test']                 = 'Secret Test Key:';
 $_['entry_mode']                = 'Transaction Mode:';
 $_['entry_method']              = 'Transaction Method:';
 $_['entry_total']               = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
