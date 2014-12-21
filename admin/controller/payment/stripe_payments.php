@@ -72,7 +72,7 @@ class ControllerPaymentStripePayments extends Controller {
 			'separator' => ' :: '
 		);
 
-		$this->data['breadcrumbs'][] = array(
+		$data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('payment/stripe_payments', 'token=' . $this->session->data['token'], 'SSL'),
 			'separator' => ' :: '
